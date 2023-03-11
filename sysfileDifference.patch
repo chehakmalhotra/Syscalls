@@ -1,0 +1,21 @@
+208a209,220
+> SYSCALL_DEFINE2(kernel_2D_memcpy, float *, M1, float *, M2)
+> {
+> 	float tempM[3][3];
+> 	if(copy_from_user(&tempM, M2, sizeof(tempM))!=0)
+> 	{
+> 		return -EFAULT;
+> 	}
+> 	if(copy_to_user(M1, &tempM, sizeof(tempM))!=0)
+> 	{
+> 		return -EFAULT;
+> 	}
+> 	return 0;
+209a222,228
+> 
+> 
+> 
+> 
+> 
+> 
+> }
